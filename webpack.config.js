@@ -12,10 +12,10 @@ module.exports = {
         publicPath: "/",
     },
     plugins: [
-        // new HtmlWebpackPlugin({
-        //     template: path.join(__dirname, "public", "index.html"),
-        //     favicon: path.join(__dirname, "public", "favicon.ico"),
-        // }),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "views", "index.html"),
+            favicon: path.join(__dirname, "views", "favicon.ico"),
+        }),
         new MiniCssExtractPlugin(),
         new CopyPlugin({
             patterns: [{
@@ -40,5 +40,12 @@ module.exports = {
                 type: 'asset/resource',
             },
         ],
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "docs"),
+        },
+        port: 3000,
+        historyApiFallback: true,
     },
 };

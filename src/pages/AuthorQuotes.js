@@ -15,8 +15,8 @@ export default function AuthorQuotes () {
     return (
         <div>
             <Author {...{author}}/>
-            {response.data.map(({quoteText: quote, quoteGenre: genre}) => (
-                <div>
+            {response.data.map(({quoteText: quote, quoteGenre: genre}, index) => (
+                <div key={index}>
                     <Quote {...{quote, genre}}/>
                 </div>
             ))}
