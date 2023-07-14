@@ -6,7 +6,7 @@ import AuthorQuotes, {dataLoader as authorQuotesDataLoader} from "./pages/Author
 export default function App() {
     let router = createBrowserRouter([
         {
-            path: "/",
+            path: __BASE_PATH__,
             children: [
                 {
                     path: '',
