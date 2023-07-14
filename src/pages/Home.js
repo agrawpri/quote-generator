@@ -17,7 +17,7 @@ export default function Home () {
         <div>
             <button onClick={revalidator.revalidate}>Random</button>
             <Quote {...{quote, genre}}/>
-            <Link to={`/author/${author}`}><Author {...{author}}/></Link>
+            <Link to={`${__BASE_PATH__}author/${author}`}><Author {...{author}}/></Link>
         </div>
     );
 }
