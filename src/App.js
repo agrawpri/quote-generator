@@ -6,7 +6,7 @@ import AuthorQuotes, {dataLoader as authorQuotesDataLoader} from "./pages/Author
 export default function App() {
     let router = createHashRouter([
         {
-            path: '/',
+            path: '/*',
             children: [
                 {
                     path: '',
