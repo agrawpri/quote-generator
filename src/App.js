@@ -1,10 +1,10 @@
 import './App.css';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 import Home, {dataLoader as homeDataLoader} from "./pages/Home";
 import AuthorQuotes, {dataLoader as authorQuotesDataLoader} from "./pages/AuthorQuotes";
 
 export default function App() {
-    let router = createBrowserRouter([
+    let router = createHashRouter([
         {
             path: '/',
             children: [
