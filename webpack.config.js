@@ -21,27 +21,41 @@ module.exports = (env, argv) => {
         throw `Unsupported environment "${environment}"`
 
     return {
+        // mode: "development",
+        // optimization: {
+        //     minimize: false,
+        // },
         entry: './src/index.js',
         output: {
             filename: 'main.js',
-            path: path.resolve(__dirname, BUILD_PATH[environment]),
+            path: path.resolve(__dirname, 'docs', 'build'),
             clean: true,
-            publicPath: "",
+            publicPath: "/build/",
         },
         plugins: [
-            new webpack.DefinePlugin({
-                __BASE_PATH__: JSON.stringify(BASE_URL[environment].pathname),
-            }),
-            new HtmlWebpackPlugin({
-                template: path.join(__dirname, "views", "index.html"),
-                favicon: path.join(__dirname, "views", "favicon.ico"),
-                base: BASE_URL[argv.mode].toString(),
-            }),
+            // new webpack.DefinePlugin({
+            //     __BASE_PATH__: JSON.stringify(BASE_URL[environment].pathname),
+            // }),
+            // new HtmlWebpackPlugin({
+            //     template: path.join(__dirname, "views", "index.html"),
+            //     favicon: path.join(__dirname, "views", "favicon.ico"),
+            //     // base: BASE_URL[argv.mode].toString(),
+            // }),
+            // new HtmlWebpackPlugin({
+            //     template: path.join(__dirname, "views", "404.html"),
+            //     filename: "404.html",
+            // }),
             new MiniCssExtractPlugin(),
             new CopyPlugin({
                 patterns: [{
                     from: path.join(__dirname, 'public'),
-                    to: path.join(__dirname, BUILD_PATH[environment]),
+                    to: path.join(__dirname, 'docs'),
+                }]
+            }),
+            new CopyPlugin({
+                patterns: [{
+                    from: path.join(__dirname, 'views'),
+                    to: path.join(__dirname, 'docs'),
                 }]
             }),
         ],
@@ -64,10 +78,12 @@ module.exports = (env, argv) => {
         },
         devServer: {
             static: {
-                directory: path.join(__dirname, BUILD_PATH[environment]),
+                directory: path.join(__dirname, 'docs'),
             },
             port: 3000,
-            historyApiFallback: true,
+            historyApiFallback: {
+                rewrites: [{ from: /\//, to: '/404.html' }],
+            },
         },
     };
 };
