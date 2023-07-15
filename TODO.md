@@ -1,0 +1,11 @@
+- [ ] Segregate webpack config for prod and dev - https://webpack.js.org/guides/production/
+- [ ] Enable source maps in production
+- [ ] Fix styles of the app according to Figma
+- [ ] Add lint checks using Github Actions
+- [ ] Add information about how to deploy changes to GitHub Pages. If possible, automate the deployment using GitHub Actions.
+- [ ] Add screenshots to README
+- [ ] Add learnings to README
+- [ ] Add "Loading..." message when navigating from AuthorQuotes to Home
+- [ ] Add name at bottom of webapp
+- [ ] Replace React favicon with devchallenges favicon
+- [ ] Submit solution
