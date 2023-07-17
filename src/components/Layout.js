@@ -1,6 +1,7 @@
-import {Anchor, Avatar, Box, Footer, Grommet, Header, Heading, Menu, Nav, Page, PageContent} from "grommet";
+import {Anchor, Avatar, Box, Footer, Grommet, Header, Heading, Nav, Page, PageContent} from "grommet";
 import React from "react";
 import {Github, Home, Linkedin} from "grommet-icons";
+import {GRAVATAR_URL} from "../consts";
 
 
 export default function Layout ({children}) {
@@ -41,7 +42,7 @@ export default function Layout ({children}) {
                                 justify={'start'}
                                 align={'center'}
                             >
-                                <Avatar src={"https://gravatar.com/avatar/c5988d9b17b1e4a5ec9d42dddf981e7b"}/>
+                                <Avatar src={GRAVATAR_URL}/>
                                 &nbsp;&nbsp;Made by Priyansh Agrawal
                             </Box>
                             <Box direction="row" gap="xxsmall" justify={'end'} size={'small'}>

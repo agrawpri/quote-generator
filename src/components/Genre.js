@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Card} from "grommet";
+import {Card} from "grommet";
 
 export default function Genre({genre}) {
     return (

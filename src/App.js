@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import Home, {dataLoader as homeDataLoader} from "./pages/Home";
 import AuthorQuotes, {dataLoader as authorQuotesDataLoader} from "./pages/AuthorQuotes";

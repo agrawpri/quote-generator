@@ -1,10 +1,9 @@
 import {BASE_API_URL} from "../consts";
-import {Link, useLoaderData, useRevalidator} from "react-router-dom";
+import {useLoaderData, useRevalidator} from "react-router-dom";
 import Quote from "../components/Quote";
 import Author from "../components/Author";
 import ReloadButton from "../components/ReloadButton";
-import {Grommet, Grid, Box, Button} from 'grommet';
-import {Update} from "grommet-icons";
+import {Box, Grid} from 'grommet';
 import Layout from "../components/Layout";
 
 export function dataLoader() {
