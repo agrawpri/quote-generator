@@ -17,7 +17,9 @@ export default function Home () {
         <div>
             <button onClick={revalidator.revalidate}>Random</button>
             <Quote {...{quote, genre}}/>
-            <Link to={`/author/${author}`}><Author {...{author}}/></Link>
+            <Link to={`/author/${author}`} style={{ textDecoration: 'none' }}>
+                <Author {...{author}}/>
+            </Link>
         </div>
     );
 }
