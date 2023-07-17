@@ -1,2 +1,3 @@
 docs/*.js binary
-docs/build/*.js binary
+docs/*.js.map binary
+package-lock.json binary

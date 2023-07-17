@@ -5,7 +5,7 @@ export default function ReloadButton({onClickHandler}) {
     return (
         <div>
             <Button
-                color={'light-4'}
+                color={'dark-1'}
                 primary
                 onClick={onClickHandler}
                 label={'Random'}

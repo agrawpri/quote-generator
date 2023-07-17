@@ -1,8 +1,9 @@
 import {BASE_API_URL} from "../consts";
-import {Link, useLoaderData, useParams} from "react-router-dom";
+import {useLoaderData, useParams} from "react-router-dom";
 import Quote from "../components/Quote";
 import Author from "../components/Author";
-import {Box, Grid, Grommet} from "grommet";
+import {Box, Grid} from "grommet";
+import Layout from "../components/Layout";
 
 export function dataLoader(params) {
     const endpoint = `${BASE_API_URL}?author=${params.params.author}`;
@@ -14,7 +15,7 @@ export default function AuthorQuotes () {
     const response = useLoaderData();
 
     return (
-        <Grommet full>
+        <Layout>
             <Grid
                 rows={[
                     'xxsmall',
@@ -42,6 +43,6 @@ export default function AuthorQuotes () {
                     ))}
                 </Box>
             </Grid>
-        </Grommet>
+        </Layout>
     );
 }

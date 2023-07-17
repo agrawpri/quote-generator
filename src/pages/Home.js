@@ -5,6 +5,7 @@ import Author from "../components/Author";
 import ReloadButton from "../components/ReloadButton";
 import {Grommet, Grid, Box, Button} from 'grommet';
 import {Update} from "grommet-icons";
+import Layout from "../components/Layout";
 
 export function dataLoader() {
     const endpoint = `${BASE_API_URL}/random`;
@@ -17,37 +18,32 @@ export default function Home () {
     const {quoteText: quote, quoteAuthor: author, quoteGenre: genre} = response.data[0];
 
     return (
-        <Grommet full>
+        <Layout>
             <Grid
                 rows={[
                     'xxsmall',
                     ['xsmall', 'flex'],
                     'xsmall',
                 ]}
-                columns={[
-                    ['xxsmall', 'large'],
-                    ['medium', 'flex'],
-                    ['xxsmall', 'large'],
-                ]}
+                columns={['flex']}
                 gap="small"
                 areas={[
-                    {name: 'button', start: [1, 0], end: [1, 0]},
-                    {name: 'quote', start: [1, 1], end: [1, 1]},
-                    {name: 'author', start: [1, 2], end: [1, 2]},
+                    {name: 'button', start: [0, 0], end: [0, 0]},
+                    {name: 'quote', start: [0, 1], end: [0, 1]},
+                    {name: 'author', start: [0, 2], end: [0, 2]},
                 ]}
+                justify={'center'}
             >
-                <Box gridArea="button" pad={'large'} direction={'row'} justify={'center'}>
+                <Box gridArea="button" pad={'large'}>
                     <ReloadButton onClickHandler={revalidator.revalidate}/>
                 </Box>
-                <Box gridArea="quote" pad={'large'} direction={'row'} justify={'center'}>
+                <Box gridArea="quote" pad={'large'}>
                     <Quote {...{quote, genre}}/>
                 </Box>
-                <Box gridArea="author" pad={'large'} direction={'row'} justify={'center'}>
-                    <Link to={`/author/${author}`} style={{ textDecoration: 'none' }}>
-                        <Author {...{author}}/>
-                    </Link>
+                <Box gridArea="author" pad={'large'}>
+                    <Author {...{author}}/>
                 </Box>
             </Grid>
-        </Grommet>
+        </Layout>
     );
 }
