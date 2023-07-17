@@ -1,8 +1,11 @@
+import QuoteText from "./QuoteText";
+import Genre from "./Genre";
+
 export default function Quote ({quote, genre}) {
     return (
         <div>
-            <div>{quote}</div>
-            <div>{genre}</div>
+            <QuoteText quoteText={quote}/>
+            <Genre genre={genre}/>
         </div>
     );
 }
