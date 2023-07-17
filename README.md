@@ -22,8 +22,6 @@
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -33,35 +31,31 @@
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
-<!-- OVERVIEW -->
-
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![img.png](screenshots/img.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+A web application which displays randomly generated quotes. One can also view quotes by a given author/speaker.
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+The app can be accessed at https://agrawpri.github.io/quote-generator/.
 
 ### Built With
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
-
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8) was to build an application to complete the given user stories.
+
+The following features have been implemented:
+- Generating random quotes on-demand.
+- Viewing all quotes by the author of the current quote.
+
+The following features are expected to arrive in the future:
+- Searching for quotes by authors using an auto-complete input field for the authors.
 
 
 ## How To Use
-
-<!-- For example: -->
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [npm](https://www.npmjs.com/) installed on your computer. From your command line:
 
@@ -79,11 +73,9 @@ $ npm run build
 $ npm run start
 ```
 
-The app should be accessible on http://localhost:3000/
+The app should then be accessible on http://localhost:3000/
 
 ## Acknowledgements
-
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
 - [Make react-router work with GitHub Pages](https://stackoverflow.com/a/71985764/5019181)
 - [HTML Webpack Plugin](https://webpack.js.org/plugins/html-webpack-plugin/)
