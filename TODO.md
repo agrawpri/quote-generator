@@ -3,13 +3,13 @@
 - [x] Add footer with social links
 - [x] Add nav bar
 - [x] Add gravatar
+- [x] Replace React favicon with devchallenges favicon
 - [ ] Segregate webpack config for prod and dev - https://webpack.js.org/guides/production/
 - [ ] Add lint checks using Github Actions
 - [ ] Add information about how to deploy changes to GitHub Pages. If possible, automate the deployment using GitHub Actions.
 - [ ] Add screenshots to README
 - [ ] Add learnings to README
 - [ ] Add "Loading..." message when navigating from AuthorQuotes to Home
-- [ ] Replace React favicon with devchallenges favicon
 - [ ] Submit solution
 - [ ] Add option to search by authors with autocomplete
 - [ ] Add Jenkins
