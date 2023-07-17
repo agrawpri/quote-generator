@@ -1,14 +1,23 @@
 import React from "react";
-import "../styles/QuoteText.css";
+import {Grommet, Paragraph} from "grommet";
+import { deepMerge } from 'grommet/utils';
+import { grommet } from 'grommet/themes';
+
+const customTheme = deepMerge(grommet, {
+    paragraph: {
+        font: {
+            family: "Raleway-Medium",
+        },
+    },
+});
+
 
 export default function QuoteText ({quoteText}) {
     return (
-        <div className="quote-text">
-            <div className="h-1-wrapper">
-                <h1 className="text-wrapper">
-                    "{quoteText}"
-                </h1>
-            </div>
-        </div>
+        <Grommet theme={customTheme}>
+            <Paragraph size={'xlarge'}>
+                "{quoteText}"
+            </Paragraph>
+        </Grommet>
     );
 };

@@ -1,12 +1,14 @@
 import React from "react";
-import "../styles/Genre.css";
+import {Box, Card} from "grommet";
 
 export default function Genre({genre}) {
     return (
-        <div className="genre">
-            <div className="div-wrapper">
-                <div className="text-wrapper">{genre}</div>
-            </div>
-        </div>
+        <Card
+            background={'light-2'}
+            pad={'small'}
+            width={'fit-content'}
+        >
+            {genre}
+        </Card>
     );
 }

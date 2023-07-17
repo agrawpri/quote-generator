@@ -61,5 +61,6 @@ module.exports = (env, argv) => {
             port: 3000,
             historyApiFallback: true,
         },
+        devtool: environment === 'production' ? 'source-map' : 'eval-source-map',
     };
 };
