@@ -79,6 +79,7 @@ The app should then be accessible on http://localhost:3000/
 
 - [Make react-router work with GitHub Pages](https://stackoverflow.com/a/71985764/5019181)
 - [HTML Webpack Plugin](https://webpack.js.org/plugins/html-webpack-plugin/)
+- [Grommet for layout and styling](https://v2.grommet.io/)
 
 ## Contact
 
