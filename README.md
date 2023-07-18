@@ -75,6 +75,18 @@ $ npm run start
 
 The app should then be accessible on http://localhost:3000/
 
+## Learnings
+I had a bunch of learnings and ah-ha moments while developing this app a few of which are the following:
+- I started out with using react-scripts but soon realized that it's not going to be enough because I wanted to host 
+  the app on GitHub Pages which requires the built code checked in to git. So, I moved to using webpack. I learned a 
+  great deal about webpack plugins and configuration including generating source maps, using HTML templates, etc.
+- I initially developed the app with vanilla CSS, but then I stumbled upon Grommet, a React library for layouts and 
+  common components. Using the same, I was able to get rid of all my CSS and my app ended up just using Grommet stuff 
+  without much any ad-hoc CSS.
+- I also faced a few issues with react-router's BrowserRouter's compatability with GitHub Pages. I tried a lot of things
+  and finally was able to fix it using HashRouter (see 
+  [this](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages/71985764#71985764)).
+
 ## Acknowledgements
 
 - [Make react-router work with GitHub Pages](https://stackoverflow.com/a/71985764/5019181)
