@@ -14,6 +14,7 @@
 - [ ] Add Jenkins
 
 <h3>Features</h3>
+
 - [ ] Add option to search by authors with autocomplet
 - [ ] Copy text / Share on Whatsapp/LinkedIn in Mobile
 - [ ] Tweet
