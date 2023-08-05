@@ -11,5 +11,10 @@
 - [ ] Add learnings to README
 - [ ] Add "Loading..." message when navigating from AuthorQuotes to Home
 - [ ] Submit solution
-- [ ] Add option to search by authors with autocomplete
 - [ ] Add Jenkins
+
+<h3>Features</h3>
+- [ ] Add option to search by authors with autocomplet
+- [ ] Copy text / Share on Whatsapp/LinkedIn in Mobile
+- [ ] Tweet
+- [ ] Share on instagram as image
